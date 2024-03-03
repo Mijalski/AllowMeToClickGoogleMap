@@ -12,7 +12,7 @@
     "content_scripts": [
       {
         "matches": ["*://*.www.google.com/search*"],
-        "js": ["../contentScript.js"]
+        "js": ["contentScript.js"]
       }
     ],
     "icons": {
