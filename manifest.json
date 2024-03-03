@@ -9,10 +9,6 @@
       "webNavigation",
       "*://www.google.com/*"
     ],
-    "background": {
-      "scripts": ["background.js"],
-      "persistent": false
-    },
     "content_scripts": [
       {
         "matches": ["*://*.www.google.com/search*"],
