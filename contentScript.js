@@ -118,5 +118,3 @@ const config = {
 const targetNode = document;
 
 observer.observe(targetNode, config);
-
-console.log('hi5')
