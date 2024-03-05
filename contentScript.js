@@ -84,24 +84,33 @@ function createButton(el) {
 }
 
 function checkForMap() {
-    // const elements = document.querySelectorAll('[data-attrid="TravelAttractionFeedback"]');
-    // if (elements !== undefined && elements.length > 0) {
-    //     createButton(elements[0]);
-    //     observer.disconnect();
-    // }
-
-    // var links = document.getElementsByTagName("a");
-    // for (var i = 0; i < links.length; i++) {
-    //     if (links[i].href.endsWith("terms_maps.html")) {
-    //         createButton(links[i].parentElement);
-    //         observer.disconnect();
-    //     }
-    // }
-
-    var elements = document.querySelectorAll('[data-stm]');
-    if (elements !== undefined && elements.length > 0) {
-        createButton(elements[0]);
+    const travelAttractionFeedbackElements = document.querySelectorAll('[data-attrid="TravelAttractionFeedback"]');
+    if (travelAttractionFeedbackElements !== undefined && travelAttractionFeedbackElements.length > 0) {
+        createButton(travelAttractionFeedbackElements[0]);
         observer.disconnect();
+        return;
+    }
+
+    const dataStmElements = document.querySelectorAll('[data-stm]');
+    if (dataStmElements !== undefined && dataStmElements.length > 0) {
+        createButton(dataStmElements[0]);
+        observer.disconnect();
+        return;
+    }
+
+    const mapImage = document.getElementById("lu_map");
+    if (mapImage) {
+        createButton(mapImage.parentNode);
+        observer.disconnect();
+        return;
+    }
+
+    const links = document.getElementsByTagName("a");
+    for (var i = 0; i < links.length; i++) {
+        if (links[i].href.endsWith("terms_maps.html")) {
+            createButton(links[i].parentElement.parentElement.parentElement.parentElement);
+            observer.disconnect();
+        }
     }
 }
 
