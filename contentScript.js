@@ -86,7 +86,7 @@ function createButton(el) {
 function checkForMap() {
     const travelAttractionFeedbackElements = document.querySelectorAll('[data-attrid="TravelAttractionFeedback"]');
     if (travelAttractionFeedbackElements !== undefined && travelAttractionFeedbackElements.length > 0) {
-        createButton(travelAttractionFeedbackElements[0]);
+        createButton(travelAttractionFeedbackElements[0].parentElement.parentElement.parentElement.parentElement.parentElement.parentElement);
         observer.disconnect();
         return;
     }
