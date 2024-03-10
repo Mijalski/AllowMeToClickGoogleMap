@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Allow me to click Google Maps",
-  "version": "1.2",
+  "version": "1.2.1",
   "description": "Allows user to go to maps from search results in google since it is impossible and has to be explicitly done by searching maps",
   "permissions": [
   ],
